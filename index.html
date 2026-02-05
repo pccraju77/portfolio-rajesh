@@ -1,0 +1,1111 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rajesh A | UI/UX Developer</title>
+    <meta name="description"
+        content="Portfolio of Rajesh A, a motivated UI/UX Developer specializing in HTML, CSS, JavaScript, and Front-end Frameworks.">
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&display=swap"
+        rel="stylesheet">
+
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['Outfit', 'sans-serif'],
+                    },
+                    colors: {
+                        primary: {
+                            DEFAULT: '#6366f1', // Indigo 500
+                            dark: '#4f46e5', // Indigo 600
+                        },
+                        secondary: {
+                            DEFAULT: '#ec4899', // Pink 500
+                            dark: '#db2777', // Pink 600
+                        },
+                        dark: {
+                            100: '#1e293b',
+                            200: '#0f172a',
+                            300: '#020617',
+                        }
+                    },
+                    backgroundImage: {
+                        'hero-pattern': "linear-gradient(to right bottom, rgba(15, 23, 42, 0.9), rgba(15, 23, 42, 0.9)), url('https://images.unsplash.com/photo-1550745165-9bc0b252726f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80')",
+                    }
+                }
+            }
+        }
+    </script>
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+
+<body class="bg-dark-300 text-slate-300 font-sans overflow-x-hidden selection:bg-primary selection:text-white">
+
+    <!-- Navigation -->
+    <nav class="fixed w-full z-50 transition-all duration-300" id="navbar">
+        <div class="container mx-auto px-6 py-4 flex justify-between items-center">
+            <a href="#" class="text-2xl font-bold text-white tracking-wider flex items-center gap-2">
+                <span class="text-primary">R</span>AJESH
+            </a>
+
+            <div class="hidden md:flex items-center space-x-8">
+                <a href="#home" class="nav-link text-sm font-medium hover:text-primary transition-colors">HOME</a>
+                <a href="#about" class="nav-link text-sm font-medium hover:text-primary transition-colors">ABOUT</a>
+                <a href="#skills" class="nav-link text-sm font-medium hover:text-primary transition-colors">SKILLS</a>
+                <a href="#experience"
+                    class="nav-link text-sm font-medium hover:text-primary transition-colors">EXPERIENCE</a>
+                <a href="#projects"
+                    class="nav-link text-sm font-medium hover:text-primary transition-colors">PROJECTS</a>
+                <a href="#contact"
+                    class="px-5 py-2.5 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-medium text-sm hover:shadow-lg hover:scale-105 transition-all duration-300">CONTACT
+                    ME</a>
+            </div>
+
+            <!-- Mobile Menu Button -->
+            <button class="md:hidden text-white focus:outline-none" id="mobile-menu-btn">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative min-h-screen flex items-center pt-20 overflow-hidden bg-dark-300">
+        <!-- Modern Background Pattern -->
+        <div class="absolute inset-0 z-0 opacity-20"
+            style="background-image: radial-gradient(#6366f1 1px, transparent 1px); background-size: 50px 50px;"></div>
+
+        <!-- Animated Blobs -->
+        <div
+            class="absolute top-[-10%] right-[-5%] w-[500px] h-[500px] bg-primary/20 rounded-full blur-[100px] animate-pulse-slow">
+        </div>
+        <div class="absolute bottom-[-10%] left-[-5%] w-[500px] h-[500px] bg-secondary/20 rounded-full blur-[100px] animate-pulse-slow"
+            style="animation-delay: 2s;"></div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-12 items-center">
+                <!-- Text Content -->
+                <div class="hero-content order-2 lg:order-1">
+                    <div
+                        class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-dark-200 border border-slate-700 mb-6 animate-float-slow">
+                        <span class="relative flex h-3 w-3">
+                            <span
+                                class="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                            <span class="relative inline-flex rounded-full h-3 w-3 bg-green-500"></span>
+                        </span>
+                        <span class="text-slate-300 text-sm font-medium tracking-wide">Available for Freelance
+                            Projects</span>
+                    </div>
+
+                    <h1 class="text-5xl md:text-7xl font-bold text-white leading-[1.1] mb-6">
+                        Hi, I'm <br>
+                        <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary via-secondary to-primary bg-300% animate-gradient typing-text"></span><span
+                            class="text-primary animate-blink">|</span>
+                    </h1>
+
+                    <h2 class="text-2xl md:text-3xl text-slate-400 font-light mb-8 max-w-lg">
+                        <span class="text-white font-semibold">UI/UX Developer</span> crafting pixel-perfect, engaging,
+                        and accessible digital experiences.
+                    </h2>
+
+                    <div class="flex flex-wrap gap-4 mb-12">
+                        <a href="#contact"
+                            class="group relative px-8 py-4 rounded-full bg-gradient-to-r from-primary to-secondary text-white font-bold shadow-lg shadow-primary/25 hover:shadow-primary/50 hover:-translate-y-1 transition-all duration-300">
+                            Let's Talk
+                            <i class="fas fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                        </a>
+                        <a href="#projects"
+                            class="px-8 py-4 rounded-full border border-slate-600 text-white font-medium hover:border-white hover:bg-white/5 transition-all">
+                            View Work
+                        </a>
+                    </div>
+
+                    <!-- Social Proof / Stats -->
+                    <div class="flex items-center gap-8 pt-8 border-t border-slate-800/50">
+                        <div>
+                            <div class="text-3xl font-bold text-white">6+</div>
+                            <div class="text-sm text-slate-500 uppercase tracking-wider">Years Exp</div>
+                        </div>
+                        <div class="w-px h-10 bg-slate-800/50"></div>
+                        <div>
+                            <div class="text-3xl font-bold text-white">5+</div>
+                            <div class="text-sm text-slate-500 uppercase tracking-wider">Projects</div>
+                        </div>
+                        <div class="w-px h-10 bg-slate-800/50"></div>
+                        <div class="flex gap-4">
+                            <a href="https://linkedin.com/in/rajesh-a-95a00a97/" target="_blank"
+                                class="text-slate-400 hover:text-primary transition-colors text-2xl"><i
+                                    class="fab fa-linkedin"></i></a>
+                            <a href="https://github.com/pccraju77" target="_blank"
+                                class="text-slate-400 hover:text-white transition-colors text-2xl"><i
+                                    class="fab fa-github"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="hero-image order-1 lg:order-2 flex justify-center lg:justify-end relative">
+                    <div class="relative w-80 h-80 md:w-[500px] md:h-[500px]">
+                        <!-- Decorative Circle Behind -->
+                        <div
+                            class="absolute inset-0 bg-gradient-to-tr from-primary/20 to-secondary/20 rounded-full blur-3xl -z-10">
+                        </div>
+
+                        <!-- Main Image Container -->
+                        <div
+                            class="relative w-full h-full rounded-full border-[10px] border-dark-200 shadow-2xl overflow-hidden z-10">
+                            <img src="hero-image.png" alt="Rajesh A" class="w-full h-full object-cover">
+                        </div>
+
+                        <!-- Orbiting Elements -->
+                        <div
+                            class="absolute inset-[-20px] border border-slate-700/30 rounded-full animate-spin-slow animate-border-cycle -z-10">
+                        </div>
+                        <div class="absolute inset-[-60px] border border-slate-700/20 rounded-full animate-reverse-spin-slow animate-border-cycle -z-20"
+                            style="animation-duration: 12s;">
+                        </div>
+
+                        <!-- Floating Badge 1 (WordPress) -->
+                        <div class="absolute top-10 right-0 md:right-10 animate-float-slow z-20">
+                            <div
+                                class="bg-dark-200/90 backdrop-blur-md p-4 rounded-xl border border-slate-700 shadow-xl flex items-center gap-3">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-cyan-600/20 flex items-center justify-center text-cyan-500">
+                                    <i class="fab fa-wordpress text-2xl"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-400 font-semibold uppercase">Expert in</div>
+                                    <div class="text-white font-bold">WordPress</div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Floating Badge 2 (HTML) -->
+                        <div class="absolute bottom-10 left-0 animate-float-slow z-20" style="animation-delay: 2s;">
+                            <div
+                                class="bg-dark-200/90 backdrop-blur-md p-4 rounded-xl border border-slate-700 shadow-xl flex items-center gap-3">
+                                <div
+                                    class="w-12 h-12 rounded-full bg-orange-600/20 flex items-center justify-center text-orange-500">
+                                    <i class="fab fa-html5 text-2xl"></i>
+                                </div>
+                                <div>
+                                    <div class="text-xs text-slate-400 font-semibold uppercase">Certified</div>
+                                    <div class="text-white font-bold">HTML Expert</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Scroll Indicator -->
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="pt-8 pb-20 bg-dark-200 relative overflow-hidden">
+        <!-- Decor Elements -->
+        <h2
+            class="absolute top-20 left-0 text-[10rem] font-bold text-white/5 pointer-events-none select-none hidden md:block leading-none">
+            ABOUT</h2>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="grid lg:grid-cols-2 gap-16 items-center">
+                <!-- Image Side -->
+                <div class="relative about-img-container">
+                    <div class="relative w-full aspect-[4/5] max-w-md mx-auto">
+                        <!-- Back border -->
+                        <div
+                            class="absolute inset-4 border-2 border-primary/20 rounded-2xl transform translate-x-4 translate-y-4">
+                        </div>
+                        <div
+                            class="absolute inset-4 border-2 border-secondary/20 rounded-2xl transform -translate-x-4 -translate-y-4">
+                        </div>
+
+                        <!-- Main Image -->
+                        <div class="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl group">
+                            <div
+                                class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all duration-500 z-10 mix-blend-overlay">
+                            </div>
+                            <img src="https://images.unsplash.com/photo-1498050108023-c5249f4df085?ixlib=rb-4.0.3&auto=format&fit=crop&w=1472&q=80"
+                                alt="Workspace"
+                                class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                        </div>
+
+                        <!-- Stats Card -->
+                        <div
+                            class="absolute -bottom-6 -right-6 md:right-4 bg-dark-300/90 backdrop-blur-md p-6 rounded-2xl border border-slate-700 shadow-xl flex items-center gap-4 animate-float-slow z-20">
+                            <div
+                                class="w-12 h-12 rounded-full bg-gradient-to-r from-primary to-secondary flex items-center justify-center text-white font-bold text-lg shadow-lg">
+                                9+
+                            </div>
+                            <div>
+                                <p class="text-xs text-slate-400 uppercase tracking-wider font-semibold">Experience</p>
+                                <p class="text-white font-bold">Years Working</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Content Side -->
+                <div class="about-content">
+                    <div
+                        class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-primary/10 border border-primary/20 text-primary text-xs font-bold uppercase tracking-widest mb-6">
+                        <span class="w-2 h-2 rounded-full bg-primary animate-pulse"></span>
+                        Who I Am
+                    </div>
+
+                    <h2 class="text-4xl md:text-5xl font-bold text-white mb-6 leading-tight">
+                        Motivated <span
+                            class="text-transparent bg-clip-text bg-gradient-to-r from-primary to-secondary">UI/UX
+                            Developer</span><br>
+                        with a Passion for Design
+                    </h2>
+
+                    <p class="text-slate-400 text-lg leading-relaxed mb-6">
+                        I am a motivated UI Developer with a strong background in creating visually appealing and
+                        user-friendly web interfaces. My journey in tech has equipped me with expertise in <strong
+                            class="text-white">HTML, CSS, JavaScript</strong>, and modern front-end frameworks.
+                    </p>
+
+                    <p class="text-slate-400 leading-relaxed mb-8">
+                        I seek to leverage my skills to contribute to innovative projects and enhance user experiences.
+                        Whether it's developing pixel-perfect wireframes or building complex web applications, I bring
+                        dedication and a keen eye for detail to every project.
+                    </p>
+
+                    <!-- Feature Grid -->
+                    <div class="grid grid-cols-2 gap-4 mb-10">
+                        <div
+                            class="p-4 rounded-xl bg-dark-300/50 border border-slate-800 hover:border-primary/30 transition-colors group">
+                            <i
+                                class="fas fa-mobile-alt text-primary text-2xl mb-2 group-hover:scale-110 transition-transform block"></i>
+                            <h4 class="text-white font-bold text-sm">Responsive Design</h4>
+                        </div>
+                        <div
+                            class="p-4 rounded-xl bg-dark-300/50 border border-slate-800 hover:border-secondary/30 transition-colors group">
+                            <i
+                                class="fas fa-layer-group text-secondary text-2xl mb-2 group-hover:scale-110 transition-transform block"></i>
+                            <h4 class="text-white font-bold text-sm">UI/UX Strategy</h4>
+                        </div>
+                        <div
+                            class="p-4 rounded-xl bg-dark-300/50 border border-slate-800 hover:border-blue-400/30 transition-colors group">
+                            <i
+                                class="fas fa-code text-blue-400 text-2xl mb-2 group-hover:scale-110 transition-transform block"></i>
+                            <h4 class="text-white font-bold text-sm">Front-end Arch</h4>
+                        </div>
+                        <div
+                            class="p-4 rounded-xl bg-dark-300/50 border border-slate-800 hover:border-orange-400/30 transition-colors group">
+                            <i
+                                class="fas fa-mouse-pointer text-orange-400 text-2xl mb-2 group-hover:scale-110 transition-transform block"></i>
+                            <h4 class="text-white font-bold text-sm">Prototyping</h4>
+                        </div>
+                    </div>
+
+                    <a href="#contact"
+                        class="group inline-flex items-center gap-2 text-white font-bold border-b-2 border-primary pb-1 hover:text-primary transition-colors">
+                        My contact details
+                        <i class="fas fa-arrow-right transform group-hover:translate-x-1 transition-transform"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="skills" class="pt-8 pb-20 relative bg-dark-300">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+                <h3 class="text-secondary font-bold tracking-widest uppercase mb-2">My Skills</h3>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Tech Stack & Tools</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <!-- Front-End Category -->
+            <div class="mb-16">
+                <h3 class="text-2xl font-bold text-white mb-8 border-l-4 border-primary pl-4">Front-End Skills &
+                    Technologies</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+                    <!-- HTML 95% -->
+                    <div
+                        class="skill-card p-4 rounded-xl bg-dark-200 border border-slate-800 hover:border-primary/50 transition-all group flex flex-col items-center">
+                        <div class="relative w-24 h-24 mb-4">
+                            <svg class="w-full h-full" viewBox="0 0 100 100">
+                                <circle class="text-slate-700 stroke-current" stroke-width="8" cx="50" cy="50" r="40"
+                                    fill="transparent"></circle>
+                                <circle class="text-orange-500 progress-ring__circle stroke-current" stroke-width="8"
+                                    stroke-linecap="round" cx="50" cy="50" r="40" fill="transparent"
+                                    stroke-dasharray="251.2" stroke-dashoffset="251.2" data-percent="95"></circle>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center text-orange-500 text-2xl">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-white font-bold mb-1">HTML</h4>
+                        <p class="text-lg font-bold text-slate-400 count-up" data-target="95">0%</p>
+                    </div>
+
+                    <!-- CSS 98% -->
+                    <div
+                        class="skill-card p-4 rounded-xl bg-dark-200 border border-slate-800 hover:border-primary/50 transition-all group flex flex-col items-center">
+                        <div class="relative w-24 h-24 mb-4">
+                            <svg class="w-full h-full" viewBox="0 0 100 100">
+                                <circle class="text-slate-700 stroke-current" stroke-width="8" cx="50" cy="50" r="40"
+                                    fill="transparent"></circle>
+                                <circle class="text-blue-500 progress-ring__circle stroke-current" stroke-width="8"
+                                    stroke-linecap="round" cx="50" cy="50" r="40" fill="transparent"
+                                    stroke-dasharray="251.2" stroke-dashoffset="251.2" data-percent="98"></circle>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center text-blue-500 text-2xl">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-white font-bold mb-1">CSS</h4>
+                        <p class="text-lg font-bold text-slate-400 count-up" data-target="98">0%</p>
+                    </div>
+
+                    <!-- JavaScript 85% -->
+                    <div
+                        class="skill-card p-4 rounded-xl bg-dark-200 border border-slate-800 hover:border-primary/50 transition-all group flex flex-col items-center">
+                        <div class="relative w-24 h-24 mb-4">
+                            <svg class="w-full h-full" viewBox="0 0 100 100">
+                                <circle class="text-slate-700 stroke-current" stroke-width="8" cx="50" cy="50" r="40"
+                                    fill="transparent"></circle>
+                                <circle class="text-yellow-400 progress-ring__circle stroke-current" stroke-width="8"
+                                    stroke-linecap="round" cx="50" cy="50" r="40" fill="transparent"
+                                    stroke-dasharray="251.2" stroke-dashoffset="251.2" data-percent="85"></circle>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center text-yellow-400 text-2xl">
+                                <i class="fab fa-js"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-white font-bold mb-1">JavaScript</h4>
+                        <p class="text-lg font-bold text-slate-400 count-up" data-target="85">0%</p>
+                    </div>
+
+                    <!-- Bootstrap 95% -->
+                    <div
+                        class="skill-card p-4 rounded-xl bg-dark-200 border border-slate-800 hover:border-primary/50 transition-all group flex flex-col items-center">
+                        <div class="relative w-24 h-24 mb-4">
+                            <svg class="w-full h-full" viewBox="0 0 100 100">
+                                <circle class="text-slate-700 stroke-current" stroke-width="8" cx="50" cy="50" r="40"
+                                    fill="transparent"></circle>
+                                <circle class="text-purple-600 progress-ring__circle stroke-current" stroke-width="8"
+                                    stroke-linecap="round" cx="50" cy="50" r="40" fill="transparent"
+                                    stroke-dasharray="251.2" stroke-dashoffset="251.2" data-percent="95"></circle>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center text-purple-600 text-2xl">
+                                <i class="fab fa-bootstrap"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-white font-bold mb-1">Bootstrap</h4>
+                        <p class="text-lg font-bold text-slate-400 count-up" data-target="95">0%</p>
+                    </div>
+
+                    <!-- React JS 65% -->
+                    <div
+                        class="skill-card p-4 rounded-xl bg-dark-200 border border-slate-800 hover:border-primary/50 transition-all group flex flex-col items-center">
+                        <div class="relative w-24 h-24 mb-4">
+                            <svg class="w-full h-full" viewBox="0 0 100 100">
+                                <circle class="text-slate-700 stroke-current" stroke-width="8" cx="50" cy="50" r="40"
+                                    fill="transparent"></circle>
+                                <circle class="text-cyan-400 progress-ring__circle stroke-current" stroke-width="8"
+                                    stroke-linecap="round" cx="50" cy="50" r="40" fill="transparent"
+                                    stroke-dasharray="251.2" stroke-dashoffset="251.2" data-percent="65"></circle>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center text-cyan-400 text-2xl">
+                                <i class="fab fa-react"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-white font-bold mb-1">React JS</h4>
+                        <p class="text-lg font-bold text-slate-400 count-up" data-target="65">0%</p>
+                    </div>
+
+                    <!-- Jquery 70% -->
+                    <div
+                        class="skill-card p-4 rounded-xl bg-dark-200 border border-slate-800 hover:border-primary/50 transition-all group flex flex-col items-center">
+                        <div class="relative w-24 h-24 mb-4">
+                            <svg class="w-full h-full" viewBox="0 0 100 100">
+                                <circle class="text-slate-700 stroke-current" stroke-width="8" cx="50" cy="50" r="40"
+                                    fill="transparent"></circle>
+                                <circle class="text-blue-400 progress-ring__circle stroke-current" stroke-width="8"
+                                    stroke-linecap="round" cx="50" cy="50" r="40" fill="transparent"
+                                    stroke-dasharray="251.2" stroke-dashoffset="251.2" data-percent="70"></circle>
+                            </svg>
+                            <div
+                                class="absolute inset-0 flex items-center justify-center text-blue-400 text-lg font-bold">
+                                jQ
+                            </div>
+                        </div>
+                        <h4 class="text-white font-bold mb-1">Jquery</h4>
+                        <p class="text-lg font-bold text-slate-400 count-up" data-target="70">0%</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Creative & Technical Category -->
+            <div>
+                <h3 class="text-2xl font-bold text-white mb-8 border-l-4 border-secondary pl-4">Creative & Technical
+                    Skills</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+
+                    <!-- Wordpress 70% -->
+                    <div
+                        class="skill-card p-4 rounded-xl bg-dark-200 border border-slate-800 hover:border-secondary/50 transition-all group flex flex-col items-center">
+                        <div class="relative w-24 h-24 mb-4">
+                            <svg class="w-full h-full" viewBox="0 0 100 100">
+                                <circle class="text-slate-700 stroke-current" stroke-width="8" cx="50" cy="50" r="40"
+                                    fill="transparent"></circle>
+                                <circle class="text-cyan-600 progress-ring__circle stroke-current" stroke-width="8"
+                                    stroke-linecap="round" cx="50" cy="50" r="40" fill="transparent"
+                                    stroke-dasharray="251.2" stroke-dashoffset="251.2" data-percent="70"></circle>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center text-cyan-600 text-2xl">
+                                <i class="fab fa-wordpress"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-white font-bold mb-1">Wordpress</h4>
+                        <p class="text-lg font-bold text-slate-400 count-up" data-target="70">0%</p>
+                    </div>
+
+                    <!-- Joomla 70% -->
+                    <div
+                        class="skill-card p-4 rounded-xl bg-dark-200 border border-slate-800 hover:border-secondary/50 transition-all group flex flex-col items-center">
+                        <div class="relative w-24 h-24 mb-4">
+                            <svg class="w-full h-full" viewBox="0 0 100 100">
+                                <circle class="text-slate-700 stroke-current" stroke-width="8" cx="50" cy="50" r="40"
+                                    fill="transparent"></circle>
+                                <circle class="text-orange-600 progress-ring__circle stroke-current" stroke-width="8"
+                                    stroke-linecap="round" cx="50" cy="50" r="40" fill="transparent"
+                                    stroke-dasharray="251.2" stroke-dashoffset="251.2" data-percent="70"></circle>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center text-orange-600 text-2xl">
+                                <i class="fab fa-joomla"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-white font-bold mb-1">Joomla</h4>
+                        <p class="text-lg font-bold text-slate-400 count-up" data-target="70">0%</p>
+                    </div>
+
+                    <!-- Adobe Photoshop 95% -->
+                    <div
+                        class="skill-card p-4 rounded-xl bg-dark-200 border border-slate-800 hover:border-secondary/50 transition-all group flex flex-col items-center">
+                        <div class="relative w-24 h-24 mb-4">
+                            <svg class="w-full h-full" viewBox="0 0 100 100">
+                                <circle class="text-slate-700 stroke-current" stroke-width="8" cx="50" cy="50" r="40"
+                                    fill="transparent"></circle>
+                                <circle class="text-blue-500 progress-ring__circle stroke-current" stroke-width="8"
+                                    stroke-linecap="round" cx="50" cy="50" r="40" fill="transparent"
+                                    stroke-dasharray="251.2" stroke-dashoffset="251.2" data-percent="95"></circle>
+                            </svg>
+                            <div
+                                class="absolute inset-0 flex items-center justify-center text-blue-500 text-lg font-bold">
+                                Ps
+                            </div>
+                        </div>
+                        <h4 class="text-white font-bold mb-1">Photoshop</h4>
+                        <p class="text-lg font-bold text-slate-400 count-up" data-target="95">0%</p>
+                    </div>
+
+                    <!-- Adobe Illustrator 85% -->
+                    <div
+                        class="skill-card p-4 rounded-xl bg-dark-200 border border-slate-800 hover:border-secondary/50 transition-all group flex flex-col items-center">
+                        <div class="relative w-24 h-24 mb-4">
+                            <svg class="w-full h-full" viewBox="0 0 100 100">
+                                <circle class="text-slate-700 stroke-current" stroke-width="8" cx="50" cy="50" r="40"
+                                    fill="transparent"></circle>
+                                <circle class="text-orange-500 progress-ring__circle stroke-current" stroke-width="8"
+                                    stroke-linecap="round" cx="50" cy="50" r="40" fill="transparent"
+                                    stroke-dasharray="251.2" stroke-dashoffset="251.2" data-percent="85"></circle>
+                            </svg>
+                            <div
+                                class="absolute inset-0 flex items-center justify-center text-orange-500 text-lg font-bold">
+                                Ai
+                            </div>
+                        </div>
+                        <h4 class="text-white font-bold mb-1">Illustrator</h4>
+                        <p class="text-lg font-bold text-slate-400 count-up" data-target="85">0%</p>
+                    </div>
+
+                    <!-- PHP 65% -->
+                    <div
+                        class="skill-card p-4 rounded-xl bg-dark-200 border border-slate-800 hover:border-secondary/50 transition-all group flex flex-col items-center">
+                        <div class="relative w-24 h-24 mb-4">
+                            <svg class="w-full h-full" viewBox="0 0 100 100">
+                                <circle class="text-slate-700 stroke-current" stroke-width="8" cx="50" cy="50" r="40"
+                                    fill="transparent"></circle>
+                                <circle class="text-indigo-400 progress-ring__circle stroke-current" stroke-width="8"
+                                    stroke-linecap="round" cx="50" cy="50" r="40" fill="transparent"
+                                    stroke-dasharray="251.2" stroke-dashoffset="251.2" data-percent="65"></circle>
+                            </svg>
+                            <div
+                                class="absolute inset-0 flex items-center justify-center text-indigo-400 text-lg font-bold">
+                                PHP
+                            </div>
+                        </div>
+                        <h4 class="text-white font-bold mb-1">PHP</h4>
+                        <p class="text-lg font-bold text-slate-400 count-up" data-target="65">0%</p>
+                    </div>
+
+                    <!-- VS Code 75% -->
+                    <div
+                        class="skill-card p-4 rounded-xl bg-dark-200 border border-slate-800 hover:border-secondary/50 transition-all group flex flex-col items-center">
+                        <div class="relative w-24 h-24 mb-4">
+                            <svg class="w-full h-full" viewBox="0 0 100 100">
+                                <circle class="text-slate-700 stroke-current" stroke-width="8" cx="50" cy="50" r="40"
+                                    fill="transparent"></circle>
+                                <circle class="text-blue-500 progress-ring__circle stroke-current" stroke-width="8"
+                                    stroke-linecap="round" cx="50" cy="50" r="40" fill="transparent"
+                                    stroke-dasharray="251.2" stroke-dashoffset="251.2" data-percent="75"></circle>
+                            </svg>
+                            <div class="absolute inset-0 flex items-center justify-center text-blue-500 text-2xl">
+                                <i class="fas fa-code"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-white font-bold mb-1">VS Code</h4>
+                        <p class="text-lg font-bold text-slate-400 count-up" data-target="75">0%</p>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience Section -->
+    <section id="experience" class="pt-8 pb-20 bg-dark-200 relative overflow-hidden">
+        <!-- Background Splashes -->
+        <div class="absolute top-0 left-0 w-full h-full overflow-hidden pointer-events-none">
+            <div class="absolute top-1/4 left-0 w-64 h-64 bg-primary/5 rounded-full blur-[80px]"></div>
+            <div class="absolute bottom-1/4 right-0 w-64 h-64 bg-secondary/5 rounded-full blur-[80px]"></div>
+        </div>
+
+        <div class="container mx-auto px-6 relative z-10">
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+                <h3 class="text-primary font-bold tracking-widest uppercase mb-2">My Journey</h3>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Professional Experience</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="max-w-5xl mx-auto relative">
+                <!-- Central Line -->
+                <div
+                    class="absolute left-4 md:left-1/2 top-0 bottom-0 w-0.5 bg-gradient-to-b from-primary via-secondary to-primary transform md:-translate-x-1/2 opacity-30">
+                </div>
+
+                <!-- Experience Item 1: Onteq -->
+                <div class="experience-item relative mb-16">
+                    <div class="md:flex items-center justify-between">
+                        <!-- Left text (Desktop) / Mobile Content -->
+                        <div class="md:w-5/12 order-2 md:order-1 pl-12 md:pl-0 md:pr-12 md:text-right">
+                            <h3 class="text-2xl font-bold text-white mb-1">UI Developer</h3>
+                            <h4 class="text-primary font-bold text-lg mb-2">ONTEQ IT SERVICES PVT LTD</h4>
+                            <div
+                                class="inline-block px-3 py-1 bg-dark-300 rounded-full border border-primary/30 text-xs text-primary font-mono mb-4">
+                                <i class="far fa-calendar-alt mr-2"></i>2021 - Present
+                            </div>
+                            <p class="text-slate-400 text-sm hidden md:block">Palakkad</p>
+                        </div>
+
+                        <!-- Center Dot -->
+                        <div
+                            class="absolute left-0 md:left-1/2 w-8 h-8 rounded-full bg-dark-200 border-4 border-primary z-20 transform md:-translate-x-1/2 shadow-[0_0_15px_rgba(99,102,241,0.5)] flex items-center justify-center">
+                            <div class="w-2 h-2 bg-white rounded-full"></div>
+                        </div>
+
+                        <!-- Right Card (Desktop) / Mobile Content Details -->
+                        <div class="md:w-5/12 order-3 md:order-2 pl-12 md:pl-12 mt-4 md:mt-0">
+                            <div
+                                class="bg-dark-300/50 backdrop-blur-sm p-6 rounded-xl border border-slate-700/50 hover:border-primary/50 transition-all hover:shadow-[0_5px_20px_rgba(99,102,241,0.1)] group">
+                                <ul class="space-y-3">
+                                    <li class="flex items-start gap-3">
+                                        <i class="fas fa-code text-primary mt-1"></i>
+                                        <span class="text-slate-300 text-sm">Developing Web applications and Websites
+                                            using HTML, CSS, Bootstrap, JavaScript.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="fas fa-layer-group text-primary mt-1"></i>
+                                        <span class="text-slate-300 text-sm">Designing user interfaces with a focus on
+                                            UX and responsiveness.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="fas fa-pen-nib text-primary mt-1"></i>
+                                        <span class="text-slate-300 text-sm">Creating illustrations, logos, and other
+                                            graphic elements.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 2: South India Group -->
+                <div class="experience-item relative mb-16">
+                    <div class="md:flex items-center justify-between flex-row-reverse">
+                        <!-- Right Text (Desktop) -->
+                        <div class="md:w-5/12 order-2 md:order-1 pl-12 md:pl-12 md:pr-0 text-left">
+                            <h3 class="text-2xl font-bold text-white mb-1">UI Dev & Backend Support</h3>
+                            <h4 class="text-secondary font-bold text-lg mb-2">SOUTH INDIA GROUP</h4>
+                            <div
+                                class="inline-block px-3 py-1 bg-dark-300 rounded-full border border-secondary/30 text-xs text-secondary font-mono mb-4">
+                                <i class="far fa-calendar-alt mr-2"></i>2017 - 2021
+                            </div>
+                            <p class="text-slate-400 text-sm hidden md:block">Bangalore</p>
+                        </div>
+
+                        <!-- Center Dot -->
+                        <div
+                            class="absolute left-0 md:left-1/2 w-8 h-8 rounded-full bg-dark-200 border-4 border-secondary z-20 transform md:-translate-x-1/2 shadow-[0_0_15px_rgba(236,72,153,0.5)] flex items-center justify-center">
+                            <div class="w-2 h-2 bg-white rounded-full"></div>
+                        </div>
+
+                        <!-- Left Card (Desktop) -->
+                        <div class="md:w-5/12 order-3 md:order-2 pl-12 md:pl-0 md:pr-12 mt-4 md:mt-0">
+                            <div
+                                class="bg-dark-300/50 backdrop-blur-sm p-6 rounded-xl border border-slate-700/50 hover:border-secondary/50 transition-all hover:shadow-[0_5px_20px_rgba(236,72,153,0.1)] group">
+                                <ul class="space-y-3">
+                                    <li class="flex items-start gap-3">
+                                        <i class="fas fa-laptop-code text-secondary mt-1"></i>
+                                        <span class="text-slate-300 text-sm">Developed and maintained websites using
+                                            HTML, CSS, and scripting languages.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="fas fa-photo-video text-secondary mt-1"></i>
+                                        <span class="text-slate-300 text-sm">Worked on content management and digital
+                                            media integration.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="fas fa-file-alt text-secondary mt-1"></i>
+                                        <span class="text-slate-300 text-sm">Created and documented style guidelines for
+                                            website content.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Experience Item 3: Trinity Mobility -->
+                <div class="experience-item relative">
+                    <div class="md:flex items-center justify-between">
+                        <!-- Left text (Desktop) -->
+                        <div class="md:w-5/12 order-2 md:order-1 pl-12 md:pl-0 md:pr-12 md:text-right">
+                            <h3 class="text-2xl font-bold text-white mb-1">GIS Executive</h3>
+                            <h4 class="text-slate-300 font-bold text-lg mb-2">TRINITY MOBILITY PVT LTD</h4>
+                            <div
+                                class="inline-block px-3 py-1 bg-dark-300 rounded-full border border-slate-500/30 text-xs text-slate-300 font-mono mb-4">
+                                <i class="far fa-calendar-alt mr-2"></i>2014 - 2017
+                            </div>
+                            <p class="text-slate-400 text-sm hidden md:block">Palakkad</p>
+                        </div>
+
+                        <!-- Center Dot -->
+                        <div
+                            class="absolute left-0 md:left-1/2 w-8 h-8 rounded-full bg-dark-200 border-4 border-slate-500 z-20 transform md:-translate-x-1/2 shadow-[0_0_15px_rgba(100,116,139,0.5)] flex items-center justify-center">
+                            <div class="w-2 h-2 bg-white rounded-full"></div>
+                        </div>
+
+                        <!-- Right Card (Desktop) -->
+                        <div class="md:w-5/12 order-3 md:order-2 pl-12 md:pl-12 mt-4 md:mt-0">
+                            <div
+                                class="bg-dark-300/50 backdrop-blur-sm p-6 rounded-xl border border-slate-700/50 hover:border-slate-500/50 transition-all hover:shadow-[0_5px_20px_rgba(100,116,139,0.1)] group">
+                                <ul class="space-y-3">
+                                    <li class="flex items-start gap-3">
+                                        <i class="fas fa-globe-asia text-slate-400 mt-1"></i>
+                                        <span class="text-slate-300 text-sm">Worked on GIS-based web technologies and
+                                            database support.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="fas fa-database text-slate-400 mt-1"></i>
+                                        <span class="text-slate-300 text-sm">Developed navigation systems using SQL
+                                            database operations.</span>
+                                    </li>
+                                    <li class="flex items-start gap-3">
+                                        <i class="fas fa-users text-slate-400 mt-1"></i>
+                                        <span class="text-slate-300 text-sm">Assisted team members in critical
+                                            requirements and projects.</span>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Education & Certification Section -->
+    <section id="education" class="pt-8 pb-20 bg-dark-300">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+                <h3 class="text-secondary font-bold tracking-widest uppercase mb-2">My Background</h3>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Education & Certification</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto">
+                <!-- Education -->
+                <div class="bg-dark-200 p-8 rounded-xl border border-slate-800 hover:border-primary/50 transition-all">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-primary/20 flex items-center justify-center text-primary text-xl">
+                            <i class="fas fa-graduation-cap"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Education</h3>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="relative pl-6 border-l-2 border-slate-700">
+                            <div
+                                class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-dark-200">
+                            </div>
+                            <h4 class="text-white font-bold text-lg">BSc Computer Science (71%)</h4>
+                            <p class="text-secondary font-medium text-sm mb-1">Nehru Arts & Science College / Coimbatore
+                            </p>
+                            <p class="text-slate-500 text-xs">June, 2009 - June, 2012</p>
+                        </div>
+
+                        <div class="relative pl-6 border-l-2 border-slate-700">
+                            <div
+                                class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-primary border-4 border-dark-200">
+                            </div>
+                            <h4 class="text-white font-bold text-lg">Biology Science (63%)</h4>
+                            <p class="text-secondary font-medium text-sm mb-1">GHSS Kumarapuram / Palakkad</p>
+                            <p class="text-slate-500 text-xs">June, 2007 - June, 2009</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Certification -->
+                <div
+                    class="bg-dark-200 p-8 rounded-xl border border-slate-800 hover:border-secondary/50 transition-all">
+                    <div class="flex items-center gap-4 mb-6">
+                        <div
+                            class="w-12 h-12 rounded-lg bg-secondary/20 flex items-center justify-center text-secondary text-xl">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="text-2xl font-bold text-white">Certification</h3>
+                    </div>
+
+                    <div class="space-y-8">
+                        <div class="relative pl-6 border-l-2 border-slate-700">
+                            <div
+                                class="absolute -left-[9px] top-0 w-4 h-4 rounded-full bg-secondary border-4 border-dark-200">
+                            </div>
+                            <h4 class="text-white font-bold text-lg">Web Designing & Development</h4>
+                            <p class="text-primary font-medium text-sm mb-1">Infocampus, Bangalore</p>
+                            <p class="text-slate-500 text-xs">2021</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="pt-8 pb-20 relative bg-dark-200">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16 max-w-2xl mx-auto">
+                <h3 class="text-secondary font-bold tracking-widest uppercase mb-2">My Work</h3>
+                <h2 class="text-3xl md:text-4xl font-bold text-white mb-4">Featured Projects</h2>
+                <div class="h-1 w-20 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
+            </div>
+
+            <div class="grid md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+
+                <!-- Project 1: Netflix Clone -->
+                <div
+                    class="project-card group rounded-xl overflow-hidden bg-dark-200 border border-slate-800 hover:border-primary/50 transition-all hover:shadow-[0_10px_30px_rgba(99,102,241,0.15)]">
+                    <div class="relative overflow-hidden h-56">
+                        <div class="absolute inset-0 bg-slate-900 flex items-center justify-center text-slate-700">
+                            <i class="fas fa-play-circle text-6xl"></i>
+                        </div>
+                        <img src="https://placehold.co/800x600/1e293b/E50914?text=Netflix+Clone&font=roboto"
+                            alt="Netflix Clone"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-200 to-transparent opacity-80"></div>
+
+                        <div
+                            class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-red-500 border border-red-500/30">
+                            NETFLIX
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-primary transition-colors">Netflix
+                            Clone App</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                            A robust and scalable web application replicating the core video streaming features of
+                            Netflix. Features a dynamic content browser and immersive UI.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-300">React JS</span>
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-300">TMDB API</span>
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-300">Firebase</span>
+                        </div>
+                        <a href="https://pccraju77.github.io/netflix-clone/" target="_blank"
+                            class="inline-flex items-center justify-center w-full px-4 py-2 bg-primary/10 border border-primary/50 hover:bg-primary text-primary hover:text-white rounded-lg transition-all duration-300 text-sm font-medium">
+                            <i class="fas fa-external-link-alt mr-2"></i> View Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 2: Employee Management System (Replaces Amazon) -->
+                <div
+                    class="project-card group rounded-xl overflow-hidden bg-dark-200 border border-slate-800 hover:border-secondary/50 transition-all hover:shadow-[0_10px_30px_rgba(236,72,153,0.15)]">
+                    <div class="relative overflow-hidden h-56">
+                        <div class="absolute inset-0 bg-slate-900 flex items-center justify-center text-slate-700">
+                            <i class="fas fa-users-cog text-6xl"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Employee Management"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-200 to-transparent opacity-80"></div>
+
+                        <div
+                            class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-secondary border border-secondary/30">
+                            SYSTEM
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-secondary transition-colors">
+                            Employee Management</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                            A comprehensive dashboard for managing employee records. Allows administrators to add,
+                            update, remove, and view detailed employee information efficiently.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-300">React JS</span>
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-300">CRUD Ops</span>
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-300">Dashboard</span>
+                        </div>
+                        <a href="#"
+                            class="inline-flex items-center justify-center w-full px-4 py-2 bg-secondary/10 border border-secondary/50 hover:bg-secondary text-secondary hover:text-white rounded-lg transition-all duration-300 text-sm font-medium cursor-not-allowed opacity-70"
+                            title="Link coming soon">
+                            <i class="fas fa-lock mr-2"></i> Private / Local
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 3: Expense Tracker -->
+                <div
+                    class="project-card group rounded-xl overflow-hidden bg-dark-200 border border-slate-800 hover:border-green-500/50 transition-all hover:shadow-[0_10px_30px_rgba(34,197,94,0.15)]">
+                    <div class="relative overflow-hidden h-56">
+                        <div class="absolute inset-0 bg-slate-900 flex items-center justify-center text-slate-700">
+                            <i class="fas fa-chart-pie text-6xl"></i>
+                        </div>
+                        <img src="https://images.unsplash.com/photo-1554224155-8d04cb21cd6c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1000&q=80"
+                            alt="Expense Tracker"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-60 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-200 to-transparent opacity-80"></div>
+
+                        <div
+                            class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-green-500 border border-green-500/30">
+                            FINANCE
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-green-500 transition-colors">
+                            Expense Tracker</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                            A smart financial tool to track income and expenses. Visualizes spending habits and helps
+                            users maintain a balanced budget with a clean interface.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-300">JavaScript</span>
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-300">Local Storage</span>
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-300">DOM</span>
+                        </div>
+                        <a href="https://pccraju77.github.io/expense-tracker/" target="_blank"
+                            class="inline-flex items-center justify-center w-full px-4 py-2 bg-green-500/10 border border-green-500/50 hover:bg-green-500 text-green-500 hover:text-white rounded-lg transition-all duration-300 text-sm font-medium">
+                            <i class="fas fa-external-link-alt mr-2"></i> View Demo
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Project 4: Mini Calculator -->
+                <div
+                    class="project-card group rounded-xl overflow-hidden bg-dark-200 border border-slate-800 hover:border-orange-500/50 transition-all hover:shadow-[0_10px_30px_rgba(249,115,22,0.15)]">
+                    <div class="relative overflow-hidden h-56">
+                        <div class="absolute inset-0 bg-slate-900 flex items-center justify-center text-slate-700">
+                            <i class="fas fa-calculator text-6xl"></i>
+                        </div>
+                        <img src="https://placehold.co/800x600/1e293b/F97316?text=Mini+Calculator&font=roboto"
+                            alt="Mini Calculator"
+                            class="w-full h-full object-cover transform group-hover:scale-110 transition-transform duration-500 opacity-80 group-hover:opacity-100">
+                        <div class="absolute inset-0 bg-gradient-to-t from-dark-200 to-transparent opacity-80"></div>
+
+                        <div
+                            class="absolute top-4 right-4 bg-black/60 backdrop-blur-md px-3 py-1 rounded-full text-xs font-bold text-orange-500 border border-orange-500/30">
+                            TOOL
+                        </div>
+                    </div>
+                    <div class="p-6 relative">
+                        <h3 class="text-xl font-bold text-white mb-2 group-hover:text-orange-500 transition-colors">Mini
+                            Calculator</h3>
+                        <p class="text-slate-400 text-sm mb-4 line-clamp-3">
+                            A fully functional digital calculator capable of performing basic arithmetic operations with
+                            precision and a user-friendly keypad design.
+                        </p>
+                        <div class="flex flex-wrap gap-2 mb-6">
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-300">HTML/CSS</span>
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-300">JavaScript
+                                Logic</span>
+                            <span class="px-2 py-1 bg-slate-800 rounded text-[10px] text-slate-300">Grid Layout</span>
+                        </div>
+                        <a href="https://pccraju77.github.io/mini-calculator/" target="_blank"
+                            class="inline-flex items-center justify-center w-full px-4 py-2 bg-orange-500/10 border border-orange-500/50 hover:bg-orange-500 text-orange-500 hover:text-white rounded-lg transition-all duration-300 text-sm font-medium">
+                            <i class="fas fa-external-link-alt mr-2"></i> View Demo
+                        </a>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="pt-8 pb-20 bg-dark-200">
+        <div class="container mx-auto px-6">
+            <div class="grid md:grid-cols-2 gap-16">
+                <div>
+                    <h3 class="text-primary font-bold tracking-widest uppercase mb-2">Get In Touch</h3>
+                    <h2 class="text-3xl md:text-4xl font-bold text-white mb-6">Let's Work Together</h2>
+                    <p class="text-slate-400 mb-10 leading-relaxed">
+                        I'm currently available for freelance work or full-time opportunities.
+                        If you have a project that needs a skilled UI developer, I'd love to hear from you.
+                    </p>
+
+                    <div class="space-y-6">
+                        <div class="flex items-center gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-dark-300 border border-slate-700 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Phone</h4>
+                                <p class="text-slate-400">+91 9061565577</p>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-dark-300 border border-slate-700 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Email</h4>
+                                <a href="mailto:pccraju7@gmail.com"
+                                    class="text-slate-400 hover:text-white transition-colors">pccraju7@gmail.com</a>
+                            </div>
+                        </div>
+
+                        <div class="flex items-center gap-4 group">
+                            <div
+                                class="w-12 h-12 rounded-lg bg-dark-300 border border-slate-700 flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-all">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-white font-bold">Location</h4>
+                                <p class="text-slate-400">Palakkad, Kerala, India</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="mt-10 pt-10 border-t border-slate-800">
+                        <h4 class="text-white font-bold mb-4">Follow Me</h4>
+                        <div class="flex gap-4">
+                            <a href="https://linkedin.com/in/rajesh-a-95a00a97/" target="_blank"
+                                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-[#0077b5] transition-all"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="https://github.com/pccraju77" target="_blank"
+                                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-black transition-all"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="#"
+                                class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center text-white hover:bg-pink-600 transition-all"><i
+                                    class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-dark-300 p-8 rounded-2xl border border-slate-800 shadow-xl">
+                    <form onsubmit="event.preventDefault(); alert('Thank you for your message! This is a demo form.');">
+                        <div class="mb-6">
+                            <label for="name" class="block text-slate-400 text-sm font-bold mb-2">Your Name</label>
+                            <input type="text" id="name"
+                                class="w-full bg-dark-200 border border-slate-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-primary transition-colors"
+                                placeholder="John Doe">
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block text-slate-400 text-sm font-bold mb-2">Email Address</label>
+                            <input type="email" id="email"
+                                class="w-full bg-dark-200 border border-slate-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-primary transition-colors"
+                                placeholder="john@example.com">
+                        </div>
+                        <div class="mb-6">
+                            <label for="subject" class="block text-slate-400 text-sm font-bold mb-2">Subject</label>
+                            <input type="text" id="subject"
+                                class="w-full bg-dark-200 border border-slate-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-primary transition-colors"
+                                placeholder="Project Inquiry">
+                        </div>
+                        <div class="mb-6">
+                            <label for="message" class="block text-slate-400 text-sm font-bold mb-2">Message</label>
+                            <textarea id="message" rows="5"
+                                class="w-full bg-dark-200 border border-slate-700 rounded-lg py-3 px-4 text-white focus:outline-none focus:border-primary transition-colors"
+                                placeholder="Tell me about your project..."></textarea>
+                        </div>
+                        <button type="submit"
+                            class="w-full bg-gradient-to-r from-primary to-secondary text-white font-bold py-3.5 rounded-lg shadow-lg hover:shadow-primary/50 hover:scale-[1.02] transition-all duration-300">
+                            Send Message <i class="fas fa-paper-plane ml-2"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-dark-300 py-10 border-t border-slate-800">
+        <div class="container mx-auto px-6 text-center">
+            <h2 class="text-2xl font-bold text-white mb-4">RAJESH A</h2>
+            <p class="text-slate-500 text-sm mb-6">&copy; 2026 Rajesh A. All rights reserved.</p>
+            <p class="text-slate-600 text-xs">Designed & Built with <i class="fas fa-heart text-red-500 mx-1"></i> using
+                HTML, Tailwind & GSAP</p>
+        </div>
+    </footer>
+
+    <!-- Mobile Menu Overlay (Moved to Body Root) -->
+    <div class="fixed inset-0 bg-dark-300/95 backdrop-blur-lg z-[60] transform translate-x-full transition-transform duration-300 md:hidden flex flex-col justify-center items-center space-y-8"
+        id="mobile-menu">
+        <button class="absolute top-6 right-6 text-white text-3xl" id="close-menu-btn">
+            <i class="fas fa-times"></i>
+        </button>
+        <a href="#home" class="mobile-link text-2xl font-bold text-white hover:text-primary">HOME</a>
+        <a href="#about" class="mobile-link text-2xl font-bold text-white hover:text-primary">ABOUT</a>
+        <a href="#skills" class="mobile-link text-2xl font-bold text-white hover:text-primary">SKILLS</a>
+        <a href="#experience" class="mobile-link text-2xl font-bold text-white hover:text-primary">EXPERIENCE</a>
+        <a href="#projects" class="mobile-link text-2xl font-bold text-white hover:text-primary">PROJECTS</a>
+        <a href="#contact" class="mobile-link text-2xl font-bold text-primary">CONTACT</a>
+    </div>
+
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>

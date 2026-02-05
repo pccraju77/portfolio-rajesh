@@ -1,0 +1,198 @@
+/* Custom CSS for Glassmorphism and Animations */
+
+/* Smooth Scrolling is handled by Tailwind 'scroll-smooth' */
+
+/* Custom Animations */
+@keyframes spin-slow {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes reverse-spin-slow {
+    from {
+        transform: rotate(360deg);
+    }
+
+    to {
+        transform: rotate(0deg);
+    }
+}
+
+.animate-spin-slow {
+    animation: spin-slow 15s linear infinite;
+}
+
+.animate-reverse-spin-slow {
+    animation: reverse-spin-slow 10s linear infinite;
+}
+
+.animate-pulse-slow {
+    animation: pulse 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Gradient Animation */
+@keyframes gradient {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+.animate-gradient {
+    background-size: 200% auto;
+    animation: gradient 3s linear infinite;
+}
+
+.bg-300\% {
+    background-size: 300%;
+}
+
+/* Dashed Circle */
+.dashed-circle {
+    border-style: dashed;
+}
+
+/* Scrollbar Customization */
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0f172a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #334155;
+    border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6366f1;
+}
+
+/* Glassmorphism Classes (if extra needed beyond Tailwind) */
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Floating Animation */
+@keyframes float {
+    0% {
+        transform: translateY(0px);
+    }
+
+    50% {
+        transform: translateY(-20px);
+    }
+
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+.float-card-1 {
+    animation: float 6s ease-in-out infinite;
+}
+
+.float-card-2 {
+    animation: float 5s ease-in-out infinite;
+    animation-delay: 1s;
+}
+
+.animate-float-slow {
+    animation: float 6s ease-in-out infinite;
+}
+
+/* Border Color Animation */
+@keyframes border-cycle {
+    0% {
+        border-color: rgba(51, 65, 85, 0.3);
+    }
+
+    33% {
+        border-color: rgba(99, 102, 241, 0.5);
+        /* Primary */
+    }
+
+    66% {
+        border-color: rgba(236, 72, 153, 0.5);
+        /* Secondary */
+    }
+
+    100% {
+        border-color: rgba(51, 65, 85, 0.3);
+    }
+}
+
+.animate-border-cycle {
+    animation: border-cycle 8s ease-in-out infinite;
+}
+
+/* Mobile Menu Transitions */
+.mobile-menu-active {
+    transform: translateX(0) !important;
+}
+
+/* Loader (Optional) */
+.loader-wrapper {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #020617;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+}
+
+/* Circular Progress Bar */
+.progress-ring__circle {
+    transition: stroke-dashoffset 1.5s ease-in-out;
+    transform: rotate(-90deg);
+    transform-origin: 50% 50%;
+}
+
+/* Fix for Sticky Navbar Overlaying Content */
+html {
+    scroll-padding-top: 70px;
+}
+
+/* Typing Effect Cursor */
+.animate-blink {
+    animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0;
+    }
+}
+
+/* Active Navigation Link */
+.nav-link.active {
+    color: #6366f1;
+    /* Primary Color */
+    font-weight: 700;
+}
