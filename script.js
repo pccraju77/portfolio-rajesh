@@ -217,6 +217,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+
     // Contact Section
     if (document.querySelector("#contact")) {
         gsap.from("#contact > div > div > div:first-child", {
@@ -240,6 +241,46 @@ document.addEventListener('DOMContentLoaded', () => {
             duration: 1,
             ease: "power3.out",
             delay: 0.2
+        });
+    }
+
+    // Contact Form Handling
+    const contactForm = document.getElementById('contact-form');
+    if (contactForm) {
+        contactForm.addEventListener('submit', function (e) {
+            e.preventDefault();
+
+            const submitBtn = contactForm.querySelector('button[type="submit"]');
+            const originalBtnText = submitBtn.innerHTML;
+
+            // Disable button and show loading state
+            submitBtn.disabled = true;
+            submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin mr-2"></i> Sending...';
+
+            const formData = new FormData(contactForm);
+
+            // Use FormSubmit.co for serverless email handling (Works on GitHub Pages)
+            fetch('https://formsubmit.co/ajax/pccraju7@gmail.com', {
+                method: 'POST',
+                body: formData
+            })
+                .then(response => response.json())
+                .then(data => {
+                    if (data.success === "true" || data.success === true) {
+                        alert("Thank you! Your message has been sent successfully.");
+                        contactForm.reset();
+                    } else {
+                        alert("Something went wrong. Please try again.");
+                    }
+                })
+                .catch(error => {
+                    console.error('Error:', error);
+                    alert('An error occurred. Please try again later.');
+                })
+                .finally(() => {
+                    submitBtn.disabled = false;
+                    submitBtn.innerHTML = originalBtnText;
+                });
         });
     }
 
