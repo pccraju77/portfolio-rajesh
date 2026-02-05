@@ -117,6 +117,17 @@
     animation: float 6s ease-in-out infinite;
 }
 
+/* Improve text rendering for elements using transform-based float animation.
+   Transforms can disable subpixel antialiasing in some browsers and cause
+   fonts to appear blurry. The rules below help preserve crisper text while
+   keeping the float animation. */
+.animate-float-slow {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    will-change: transform;
+}
 /* Border Color Animation */
 @keyframes border-cycle {
     0% {
