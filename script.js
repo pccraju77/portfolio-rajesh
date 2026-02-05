@@ -160,26 +160,60 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     function animateSkillsContent() {
-        // Animate Circles
+        // Animate Circles using GSAP so we can re-run smoothly
         document.querySelectorAll('.progress-ring__circle').forEach(circle => {
             const percent = circle.getAttribute('data-percent');
             const radius = circle.getAttribute('r');
             const circumference = 2 * Math.PI * radius;
+            // ensure dasharray is set
+            circle.style.strokeDasharray = circumference;
             const offset = circumference - (percent / 100) * circumference;
-            circle.style.strokeDashoffset = offset;
+            gsap.to(circle, {
+                strokeDashoffset: offset,
+                duration: 1.5,
+                ease: "power1.out"
+            });
         });
 
-        // Animate Numbers
+        // Animate Numbers using GSAP so we can re-run on demand
         document.querySelectorAll('.count-up').forEach(counter => {
             const target = +counter.getAttribute('data-target');
-            let zero = { val: 0 };
-            gsap.to(zero, {
+            let ctx = { val: 0 };
+            gsap.to(ctx, {
                 val: target,
                 duration: 1.5,
                 ease: "power1.out",
                 onUpdate: function () {
-                    counter.innerText = Math.ceil(zero.val) + "%";
+                    counter.innerText = Math.ceil(ctx.val) + "%";
                 }
+            });
+        });
+    }
+
+    // Reset progress rings and counters so animations can re-run on demand
+    function resetSkillsAnimation() {
+        document.querySelectorAll('.progress-ring__circle').forEach(circle => {
+            const radius = circle.getAttribute('r');
+            const circumference = 2 * Math.PI * radius;
+            circle.style.strokeDasharray = circumference;
+            circle.style.strokeDashoffset = circumference;
+        });
+        document.querySelectorAll('.count-up').forEach(counter => {
+            counter.innerText = '0%';
+        });
+    }
+
+    // Trigger animation when Skills nav link is clicked (desktop + mobile)
+    const skillsNavLinks = document.querySelectorAll('.nav-link[href="#skills"], .mobile-link[href="#skills"]');
+    if (skillsNavLinks.length > 0) {
+        skillsNavLinks.forEach(link => {
+            link.addEventListener('click', (e) => {
+                // Reset immediately so user sees animation from 0
+                resetSkillsAnimation();
+                // Delay slightly to allow browser to perform the scroll
+                setTimeout(() => {
+                    animateSkillsContent();
+                }, 500);
             });
         });
     }
