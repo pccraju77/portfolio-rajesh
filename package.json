@@ -1,6 +1,6 @@
 {
   "devDependencies": {
-    "tailwindcss": "^4.1.18"
+    "tailwindcss": "^3.4.17"
   },
   "name": "portfolio-rajesh",
   "version": "1.0.0",
