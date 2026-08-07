@@ -8,12 +8,12 @@ module.exports = {
             },
             colors: {
                 primary: {
-                    DEFAULT: '#6366f1', // Indigo 500
-                    dark: '#4f46e5', // Indigo 600
+                    DEFAULT: '#6082B6', // Muted Blue
+                    dark: '#466695', // Dark Muted Blue
                 },
                 secondary: {
-                    DEFAULT: '#ec4899', // Pink 500
-                    dark: '#db2777', // Pink 600
+                    DEFAULT: '#94A3B8', // Slate 400
+                    dark: '#64748B', // Slate 500
                 },
                 dark: {
                     100: '#1e293b',

@@ -95,7 +95,7 @@
 }
 
 ::-webkit-scrollbar-thumb:hover {
-    background: #6366f1;
+    background: #6082B6;
 }
 
 /* Glassmorphism Classes (if extra needed beyond Tailwind) */
@@ -151,12 +151,12 @@
     }
 
     33% {
-        border-color: rgba(99, 102, 241, 0.5);
+        border-color: rgba(96, 130, 182, 0.5);
         /* Primary */
     }
 
     66% {
-        border-color: rgba(236, 72, 153, 0.5);
+        border-color: rgba(148, 163, 184, 0.5);
         /* Secondary */
     }
 
@@ -219,7 +219,7 @@ html {
 
 /* Active Navigation Link */
 .nav-link.active {
-    color: #6366f1;
+    color: #6082B6;
     /* Primary Color */
     font-weight: 700;
 }
