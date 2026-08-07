@@ -210,14 +210,38 @@
                             class="absolute inset-4 border-2 border-secondary/20 rounded-2xl transform -translate-x-4 -translate-y-4">
                         </div>
 
-                        <!-- Main Image -->
-                        <div class="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl group">
-                            <div
-                                class="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all duration-500 z-10 mix-blend-overlay">
+                        <!-- Main Image / Mock Code Editor -->
+                        <div class="absolute inset-0 rounded-2xl overflow-hidden shadow-2xl bg-dark-300 border border-slate-700 flex flex-col font-mono text-sm z-10 transition-transform duration-500 hover:scale-[1.02]">
+                            <!-- Window Header -->
+                            <div class="flex items-center px-4 py-3 bg-dark-200 border-b border-slate-700">
+                                <div class="flex gap-2">
+                                    <div class="w-3 h-3 rounded-full bg-red-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500"></div>
+                                    <div class="w-3 h-3 rounded-full bg-green-500"></div>
+                                </div>
+                                <div class="mx-auto text-slate-400 text-xs">index.html</div>
                             </div>
-                            <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?ixlib=rb-4.0.3&auto=format&fit=crop&w=1744&q=80"
-                                alt="Coding Workspace"
-                                class="w-full h-full object-cover transform scale-100 group-hover:scale-110 transition-transform duration-700">
+                            <!-- Code Content -->
+                            <div class="p-6 text-slate-300 overflow-hidden leading-relaxed h-full relative text-[0.8rem] md:text-sm">
+                                <div class="text-slate-500 mb-2">&lt;!DOCTYPE html&gt;</div>
+                                <div class="mb-2"><span class="text-primary">&lt;html</span> <span class="text-secondary">lang</span><span class="text-white">=</span><span class="text-green-400">"en"</span><span class="text-primary">&gt;</span></div>
+                                <div class="pl-4 mb-2"><span class="text-primary">&lt;head&gt;</span></div>
+                                <div class="pl-8 mb-2"><span class="text-primary">&lt;title&gt;</span><span class="text-white">Rajesh A - Portfolio</span><span class="text-primary">&lt;/title&gt;</span></div>
+                                <div class="pl-4 mb-2"><span class="text-primary">&lt;/head&gt;</span></div>
+                                <div class="pl-4 mb-2"><span class="text-primary">&lt;body</span> <span class="text-secondary">class</span><span class="text-white">=</span><span class="text-green-400">"ui-developer"</span><span class="text-primary">&gt;</span></div>
+                                <div class="pl-8 mb-2"><span class="text-slate-500">&lt;!-- Crafting digital experiences --&gt;</span></div>
+                                <div class="pl-8 mb-2">
+                                    <span class="text-primary">&lt;div</span> <span class="text-secondary">class</span><span class="text-white">=</span><span class="text-green-400">"passion"</span><span class="text-primary">&gt;</span>
+                                </div>
+                                <div class="pl-12 mb-2">
+                                    <span class="text-white">Design meets code.</span>
+                                </div>
+                                <div class="pl-8 mb-2">
+                                    <span class="text-primary">&lt;/div&gt;</span>
+                                </div>
+                                <div class="pl-4 mb-2"><span class="text-primary">&lt;/body&gt;</span></div>
+                                <div class="mb-2"><span class="text-primary">&lt;/html&gt;</span><span class="inline-block w-2 h-4 bg-primary animate-blink align-middle ml-1"></span></div>
+                            </div>
                         </div>
 
                         <!-- Stats Card -->
